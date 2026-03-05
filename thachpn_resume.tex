@@ -1,0 +1,193 @@
+%-------------------------
+% Resume in LateX
+% Author : Sourabh Bajaj
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % Clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate PDF is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+% Just in case someone needs a heading that does not need to be in a list
+\newcommand{\resumeHeading}[4]{
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\LARGE Pham Ngoc Thach} & Email: \href{mailto:phamngocthach13112003@gmail.com}{phamngocthach13112003@gmail.com}\\
+  \href{https://github.com/pngocthach}{github.com/pngocthach} | \href{http://www.linkedin.com/in/pham-ngoc-thach}{LinkedIn} & Mobile: \href{tel:+84886901311}{+84 886 901 311} \\
+\end{tabular*}
+
+
+%-----------SKILLS-----------------
+\section{Skills}
+  \begin{itemize}[leftmargin=*, nosep, itemsep=2pt]
+    \item\small{\textbf{Programming Languages}{: Go, TypeScript, Python, JavaScript}}
+    \item\small{\textbf{Technology}{: NestJS, FastAPI, Docker, MongoDB, PostgreSQL, Redis, Kafka, gRPC, LightGBM, Linux}}
+  \end{itemize}
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {\href{https://sonat.vn}{Sonat Game Studio}}{Hanoi, Vietnam}
+      {Software Engineer}{Nov 2024 -- Present}
+      \resumeItemListStart
+        \item\small\textbf{Revenue Prediction Service (LightGBM, FastAPI, TanStack Start)}
+        \begin{itemize}[label=$\circ$, topsep=1pt, itemsep=2pt]
+          \item\small{Developed machine learning models using LightGBM to predict revenue for advertising campaigns, achieving RMSE under 10 and R$^2$ above 0.9.}
+          \item\small{Built a prediction API (FastAPI) and a model monitoring system to track performance.}
+          \item\small{Implemented a frontend dashboard with TanStack Start for visualization and model insights.}
+        \end{itemize}\vspace{4pt}
+        \item\small\textbf{Game Service Platform (NestJS, Go, MongoDB, Redis, Debezium, Kafka, gRPC, Testcontainers)}
+        \begin{itemize}[label=$\circ$, topsep=1pt, itemsep=2pt]
+          \item\small{Developed a microservices system for online features of 7 mobile games, serving over 1.6 million users.}
+          \item\small{Migrated API Gateway Service from Node.js to Go, boosting throughput and resource efficiency; ensured stability using Testcontainers.}
+          \item\small{Used Redis to implement high-concurrency features (leaderboards, tournaments) while minimizing response latency.}
+          \item\small{Utilized Debezium for real-time data synchronization across microservices.}
+          \item\small{Optimized inter-service communication via gRPC and event-driven Kafka messaging.}
+        \end{itemize}\vspace{4pt}
+        \item\small\textbf{Game Design Tool (Python, Streamlit, FastAPI, LightGBM)}
+        \begin{itemize}[label=$\circ$, topsep=1pt, itemsep=2pt]
+          \item\small{Automated solvability verification of 1,200+ levels with a state-space search algorithm.}
+          \item\small{Boosted level design productivity with an internal tool that auto-generates puzzle levels.}
+          \item\small{Built LightGBM models to predict level difficulty, achieving R$^2$ $\sim$0.88.}
+        \end{itemize}\vspace{4pt}
+        \item\small\textbf{Internal Tracking SDK (C\#, Unity)}
+        \begin{itemize}[label=$\circ$, topsep=1pt, itemsep=2pt]
+          \item\small{Developed a C\# SDK for internal game tracking system, optimized for minimal impact on game performance.}
+          \item\small{Ensured data integrity and reliable delivery for integration across all company games.}
+        \end{itemize}\vspace{4pt}
+        \item\small\textbf{Customer Support AI Agent (NestJS, Ollama, BAML)}
+        \begin{itemize}[label=$\circ$, topsep=1pt, itemsep=2pt]
+          \item\small{Automated 90\% of the customer review response process by building a backend system (NestJS) that integrated with a self-hosted LLM (Ollama) and BAML for structured outputs to auto-classify, tag reviews, and generate replies.}
+        \end{itemize}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+\section{Projects}
+  \begin{itemize}[leftmargin=*, nosep, itemsep=4pt]
+    \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{NxN Tic-tac-toe AI Agent} & \href{https://github.com/pngocthach/tictactoe-ai}{github.com/pngocthach/tictactoe-ai} \\
+    \end{tabular*}\vspace{2pt}
+    \begin{itemize}[label=$\circ$, topsep=1pt, itemsep=2pt]
+      \item\small{Built a full-stack Tic-Tac-Toe game with Go and HTMX featuring an AI opponent using the Alpha-Beta Pruning search algorithm.}
+    \end{itemize}
+    \vspace{4pt}\vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{HTTP Server from scratch} & \href{https://github.com/pngocthach/httpfromtcp}{github.com/pngocthach/httpfromtcp} \\
+    \end{tabular*}\vspace{2pt}
+    \begin{itemize}[label=$\circ$, topsep=1pt, itemsep=2pt]
+      \item\small{Built an HTTP server via raw TCP sockets with manual request/response parsing.}
+      \item\small{Utilized Goroutines to handle concurrent client connections and optimize throughput.}
+    \end{itemize}
+  \end{itemize}
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Technology and Engineering (VNU-UET)}{Hanoi, Vietnam}
+      {Bachelor of Computer Science; GPA: 3.36}{Sep 2021 -- Jun 2025}
+    \resumeSubItem{IELTS}{6.5}
+  \resumeSubHeadingListEnd
+
+%-----------OLD CONTENT (commented out)-----------------
+% \resumeSubheading
+%   {Georgia Institute of Technology}{Atlanta, GA}
+%   {Master of Science in Computer Science; GPA: 4.00}{Aug 2012 -- Dec 2013}
+% \resumeSubheading
+%   {Birla Institute of Technology and Science}{Pilani, India}
+%   {Bachelor of Engineering in Electrical and Electronics; GPA: 3.66 (9.15/10.0)}{Aug 2008 -- July 2012}
+% \resumeSubheading {Google}{Mountain View, CA}{Software Engineer}{Oct 2016 -- Present}
+% \resumeSubheading {Coursera}{Mountain View, CA}{Senior Software Engineer}{Jan 2014 -- Oct 2016}
+% \resumeSubheading {Lucena Research}{Atlanta, GA}{Data Scientist}{Summer 2012 and 2013}
+% \resumeSubheading {Georgia Institute of Technology}{Atlanta, GA}{Research and Teaching Assistant}{Jan 2012 -- Dec 2013}
+% \resumeSubItem{QuantSoftware Toolkit}{Open source Python library for financial data analysis and machine learning for finance.}
+% \resumeSubItem{GitHub Visualization}{Data visualization of Git log data using D3 to analyze project trends over time.}
+% \resumeSubItem{Recommendation System}{Music and movie recommender systems using collaborative filtering on public datasets.}
+% \resumeSubItem{Mac Setup}{Book that gives step-by-step instructions on setting up developer environment on macOS.}
+
+%-------------------------------------------
+\end{document}
